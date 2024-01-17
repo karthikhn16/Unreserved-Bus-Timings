@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Enter Source and Destination</title>
+</head>
+<body>
+	<form  id="myform" method="post" action="/" >
+        <div class="cardindex">
+        <h1> KSRTC UNRESERVED TIMINGS </h1>
+		<!-- <label for="source">Source:</label> -->
+		
+		<!-- <select id="text" name="source" >
+			<option> Choose Source</option>
+         <% for (var i =0; i<searchcontents.length ; i++){ %>    	
+        <option><%= searchcontents[i] %></option>
+		<% } %>
+	     </select> -->
+		 <input type="text" class="selection" name="source" id="myTextbox" value="<%= from1 %>" style="font-weight: 150;" readonly>
+       <br><br>
+		<label for="destination">Destination:</label>
+
+		<!-- <input  placeholder="Enter Source " autocomplete="off" required="required" type="text" class =" selection" id="Source" name="source" list="sourceinfo">
+		<datalist id="sourceinfo">
+		<% for (var i =0; i<searchcontents.length ; i++){ %>    	
+	   <option><%= searchcontents[i] %></option>
+	   <% } %>
+   </datalist> --> 
+         
+<select  required id="destination"    placeholder="Select Destination" name="destination" autocomplete="off" list="cars">
+        
+      
+      <option  disabled selected hidden>Choose Destination</option>
+
+      
+      <% for (var i =0; i<searchcontents.length ; i++){ %>      
+      <option><%= searchcontents[i] %></option>
+      <% } %>
+    
+  </select>
+		<!-- <input type="text" id="destination" name="destination" list="cars"><br><br> -->
+        <br><br>
+		<input type="submit" id = "submit" value="Submit">
+        </div>
+    </form> 
+	<script>
+	document.getElementById("myform").addEventListener("submit", function(event) {
+  var selectValue = document.getElementsByName("destination")[0].value;
+  console.log(selectValue);
+  if (selectValue === "Choose Destination") {
+    alert("Please Choose");
+    event.preventDefault(); // Prevent form submission
+  }
+});
+	</script>
+
+      
+	 <div id="ad-container"></div>
+    
+
+
+
+
+	 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9389313017913973"
+     crossorigin="anonymous"></script>
+<!-- KUkka -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9389313017913973"
+     data-ad-slot="3900207556"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "pub-9389313017913973",
+          enable_page_level_ads: true
+     });
+</script>
+<div id="ad-container"></div>
+    
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9389313017913973"
+crossorigin="anonymous"></script>
+<!-- KUkka -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9389313017913973"
+data-ad-slot="3900207556"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+	 google_ad_client: "pub-9389313017913973",
+	 enable_page_level_ads: true
+});
+</script>
+<!-- <div class="cardindex"> -->
+<!-- <footer >Disclaimer: 
+The KSRTC Karnataka is not associated with this website. The information presented here is sourced from the official records of the Karntaka State Road Transport Corporation. kkinfopoint website cannot be held accountable for any variations in timing. </footer> -->
+<!-- <footer>
+	Copyright © 2023 kkinfopoint. All rights reserved.</footer> -->
+
+</div>
+
+</body>
+</html>

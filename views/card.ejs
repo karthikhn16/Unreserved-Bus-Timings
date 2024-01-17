@@ -1,0 +1,113 @@
+<!-- flip-card-container -->
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9389313017913973"
+          crossorigin="anonymous"></script>
+  </head>
+  
+  <body> 
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+
+      document.getElementById("btn").addEventListener("click",function()
+      {
+        window.location.href = "http://127.0.0.1:3000/";
+        window.location.replace("http://127.0.0.1:3000/");
+        
+      })
+    });
+      
+    </script>
+    
+    <div class="card-header">
+      <h2>KSRTC UNRESERVED BUS TIMINGS</h2>
+    </div>
+      
+  <div class="card">
+    <div class="row rowfor">
+    <div class="col-7 sourcecolor">
+      <h3> Source: </h3>
+      <input type="text" class="sourcecolor sourcenameformob" name="myTextbox" id="myTextbox" value="<%= from1 %>" readonly>
+      <!-- <input type="text" id="source" name="source" list="cars"  > -->
+    </div>
+    <div class="col-7 sourcecolor">
+      <h3> Destination:</h3>
+      <input type="text" name="myTextbox" id="myTextbox" value="<%= to1 %>" readonly>
+
+      <!-- <input type="text" id="destination" name="destination" list="cars"> -->
+    </div>
+    <div class="col-7 sourcecolor">
+      <br>
+     <button class="card  row buttonformobile" style="border-color: #b56e3f;border-style:ridge; position: relative;" id="btn">Modify search</button>
+
+    </div>
+
+    </div>
+    </div>
+    <div id="ad-container">
+      
+      <!-- ff -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-9389313017913973"
+           data-ad-slot="8237077816"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+
+
+      <% for (let i = 0; i
+      < to.length; i++) { %>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <h3 id = "from" >From:</h3>
+              <p>
+                <%= from[i] %>
+              </p>
+            </div>
+            <div class="col-6">
+              <h3>To:</h3>
+              <p>
+                <%= to[i] %>
+              </p>
+            </div>
+            <div class="col-6">
+              <h3>Bus Type</h3>
+              <p>
+                <%= bustype[i] %>
+              </p>
+            </div>
+            <div class="col-6">
+              <h3>Time</h3>
+              <p style="color:  #F97B22;">
+                <%= time[i] %>
+              </p>
+            </div>
+
+
+            <div class="col-6 via">
+              <h3>Via</h3>
+              <p>
+                <%= via[i] %>
+              </p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <br>
+      
+            </div>
+  
+  <% } %>
+  <script src="index.js"></script>
+  </body> 
